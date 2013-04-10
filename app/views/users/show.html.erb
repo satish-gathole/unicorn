@@ -1,0 +1,43 @@
+<div class="user_details">
+
+  <aside>
+    <section>
+      <%= image_tag("default_profile.png") %>
+      <p>
+        <b>Username:</b>
+        <%= @user.username %>
+      </p>
+
+      <p>
+        <b>Email:</b>
+        <%= @user.email %>
+      </p>
+
+    </section>
+
+    <section>
+      <%= render '/users/shared/stats' %>
+    </section>
+
+    <section>
+      <%= render :partial =>  '/minitweet/posts/post_form', :locals => {:hidden_value => true, :submit_class => "btn-primary"} %>
+    </section>
+  </aside>
+
+    <div class="span1">
+      <div class="follow_btn_link">
+        <%= render '/minitweet/relationships/follow_form' if not current_user==(@user) %>
+        <%= link_to 'All users', users_path %>
+      </div>
+
+
+      <div id="posts_list">
+        <% if @posts.any? %>
+            <%= render "/minitweet/posts/post_list", :collection => @posts %>
+        <% end %>
+      </div>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,152 @@
+* {
+  margin: 0; padding: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+ol, ul, li {
+  list-style: none outside none;
+}
+
+.clear { clear:both; }
+.clearfix:after {clear:both;content:".";display:block;height:0;visibility:hidden;}
+.clearfix {display:inline-block;}
+.clearfix {display:block;}
+
+.logo{
+  float: left;
+  padding-top: 20px;
+  font-size: 45px;
+  font-family: Arial,Helvetica,sans-serif;
+  color: #E6E6E6;
+}
+
+.blog {
+  background-color: #ccc;
+  color: #000000;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 16px;
+}
+.box {
+  width: 940px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.header { background-color: #0B615E; height: 85px; }
+.footer { background-color: #0B615E; height: 100px;  }
+.container {
+  .box {
+    border-left: 0px solid #000000;
+    border-right: 0px solid #000000;
+    min-height: 600px;
+  }
+}
+.nav {
+  a {
+    color: #fff;
+    padding: 0 5px;
+  }
+}
+.links {
+  padding: 44px 24px 0 0;
+  float: right;
+}
+
+.signin_form{
+  margin: 0 auto;
+  padding-top: 55px;
+  width: 545px;
+
+  h2{
+    padding-bottom: 20px;
+    padding-left: 2px;
+  }
+
+  .sign_field{
+    padding-bottom: 15px;
+  }
+}
+
+.inp{
+  color: #58595B;
+  font-size: 16px;
+  padding: 4px 6px 3px 9px;
+  width: 444px;
+}
+
+.signin_form_btn_box {
+  padding-right: 3px;
+  width: 467px;
+}
+
+.remember_me{
+  color: #6D6E71;
+  float: left;
+  font-size: 15px;
+  padding-top: 6px;
+}
+
+.singin_btn{
+  float: right;
+}
+
+.signin_form_links {
+  color: #5A5B5E;
+  font-size: 14px;
+  padding-bottom: 15px;
+  font-family: Arial,Helvetica,sans-serif;
+  width: 467px;
+
+  a {
+    color: #aaa;
+    font-size: 16px;
+  }
+
+}
+.signin_form_links_left {
+  float: left;
+  width: 244px;
+}
+.signin_form_links_right {
+  float: right;
+  text-align: right;
+  width: 200px;
+}
+
+.signup_field{
+  color: #808080;
+  padding-bottom: 15px;
+  width: 580px;
+
+  .field_name{
+    float: left;
+    padding: 11px 12px 0 0;
+    text-align: right;
+    width: 80px;
+  }
+  .confirm_pwd {
+    padding-top: 2px;
+  }
+}
+
+.signup_form_btn {
+  padding-right: 3px;
+  width: 558px;
+}
+
+.signup_form_links {
+  color: #5A5B5E;
+  font-size: 14px;
+  padding-bottom: 15px;
+  font-family: Arial,Helvetica,sans-serif;
+  width: 558px;
+
+  a {
+    color: #aaa;
+    font-size: 16px;
+  }
+
+}

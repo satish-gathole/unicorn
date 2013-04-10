@@ -1,0 +1,16 @@
+<header class="header">
+
+
+  <nav id="user_nav" class="nav box">
+    <h1 class="logo" > <%= link_to "Rails Tweet",  root_path %></h1>
+
+    <div class="links">
+    <% if user_signed_in? %>
+        <%= link_to "My profile", current_user %>
+        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+    <% else %>
+        <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+    <% end %>
+    </div>
+  </nav>
+</header>

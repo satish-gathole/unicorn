@@ -1,0 +1,31 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home_post_box {
+  float: left;
+  margin: 50px 10px;
+  padding: 22px 2px;
+  width: 300px;
+}
+
+.posts_box{
+  width: 375px;
+  height: 440px;
+  margin: 0 auto;
+  background-color: #ccc;
+  margin-top: 20px;
+  padding: 22px 2px;
+  border-radius: 15px;
+  float: left;
+}
+
+.relations {
+  float: left;
+  margin: 65px 5px;
+  width: 225px;
+
+  .following{
+    min-height: 125px;
+  }
+}

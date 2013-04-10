@@ -1,0 +1,27 @@
+<h2>New User:</h2>
+
+<%= form_for @user do |f| %>
+
+  <p> Username:</br> <%= f.text_field :username %> </p>
+
+  <p> Email:</br> <%= f.text_field :email %> </p>
+
+  <p> Password:</br> <%= f.password_field :password%></p>
+
+  <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
+
+  <%= f.submit "Sign Up" %></br></br>
+
+  <%= notice %></br>
+
+  <% if @user.errors.any? %>
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited
+        this user from being created:</h2>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>  
+ 
+<% end %>

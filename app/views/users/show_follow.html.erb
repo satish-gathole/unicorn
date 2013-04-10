@@ -1,0 +1,32 @@
+<%= provide(:title, @title) %>
+<div class="user_follow">
+
+    <section>
+      <h1><%= @user.username %></h1>
+      <%#= link_to "My profile", @user %>
+    </section>
+
+    <section>
+      <%= render '/users/shared/stats' %>
+    </section>
+
+     <div class="follow_list">
+        <h3><%= @title %></h3>
+        <% if @users.any? %>
+          <ul class="users">
+            <% @users.each do |u| %>
+                <li>
+                  <%= image_tag("default_profile.png", :size=>"30x30" ) %>
+                  <%= link_to u.username, u %>
+                </li>
+            <% end %>
+          </ul>
+          <%= will_paginate @users %>
+
+       <% else %>
+           <p>Do not have any <%= @title %></p>
+       <% end %>
+
+
+     </div>
+</div>

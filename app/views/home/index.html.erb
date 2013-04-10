@@ -1,0 +1,41 @@
+<div class="home">
+  <h1>Twitter Test Project</h1>
+  <% if user_signed_in? %>
+
+      <div class="home_post_box">
+        <%= render :partial =>  '/minitweet/posts/post_form', :locals => {:hidden_value => false, :submit_class => "post_sumbit" } %>
+      </div>
+
+      <div class="posts_box">
+        <%= render "/minitweet/posts/current_user_all_posts", :collection => @posts %>
+      </div>
+
+      <div class="relations">
+
+        <div class="following">
+          <h2> Following(<%= @following.count %>) </h2>
+          <ul class="users">
+            <% @following.each do |u| %>
+                <li>
+                  <%= image_tag("default_profile.png", :size=>"30x30" ) %>
+                  <%= link_to u.username, u %>
+                </li>
+            <% end %>
+          </ul>
+          <%= will_paginate @following, :param_name => 'followed_page' %>
+        </div>
+        <div class="followers">
+          <h2> Followers(<%= @followers.count %>) </h2>
+          <ul class="users">
+            <% @followers.each do |u| %>
+                <li>
+                  <%= image_tag("default_profile.png", :size=>"30x30" ) %>
+                  <%= link_to u.username, u %>
+                </li>
+            <% end %>
+          </ul>
+          <%= will_paginate @followers, :param_name => 'follower_page' %>
+        </div>
+      </div>
+  <% end %>
+</div>

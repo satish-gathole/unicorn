@@ -1,0 +1,48 @@
+<div class="signin_form">
+
+    <h2>Enter Account Details</h2>
+
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="signup_field clearfix">
+        <div class="field_name">
+          <%= f.label :username %>
+        </div>
+        <%= f.text_field :username, :autofocus => true, :class => "inp" %>
+      </div>
+
+      <div class="signup_field clearfix">
+        <div class="field_name">
+          <%= f.label :email %>
+        </div>
+        <%= f.email_field :email, :class => "inp" %>
+      </div>
+
+      <div class="signup_field clearfix">
+        <div class="field_name">
+          <%= f.label :password %>
+        </div>
+        <%= f.password_field :password, :class => "inp" %>
+      </div>
+
+      <div class="signup_field clearfix">
+        <div class="field_name confirm_pwd">
+          <%= f.label :password_confirmation %>
+        </div>
+      <%= f.password_field :password_confirmation, :class => "inp" %>
+      </div>
+
+      <div class="sign_field clearfix signup_form_btn">
+        <div class="singin_btn">
+          <%= f.submit "Sign up" %>
+        </div>
+      </div>
+
+    <% end %>
+
+  <div class="clearfix signup_form_links">
+    <%= render "devise/shared/links" %>
+  </div>
+
+</div>

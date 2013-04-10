@@ -1,0 +1,36 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.current_user_posts{
+  list-style: none;
+  margin: 10px 0 0 0;
+  height: 400px;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+
+    img{
+      float: left;
+      vertical-align: middle;
+      padding: 0 10px;
+    }
+    .post_details{
+      padding: 0 5px;
+      text-align: left;
+    }
+  }
+}
+
+
+input.btn-primary {
+  float: right;
+  margin: 10px 45px 0 0;
+}
+
+
+input.post_sumbit {
+  float: right;
+  margin: 10px 10px 0 0;
+}

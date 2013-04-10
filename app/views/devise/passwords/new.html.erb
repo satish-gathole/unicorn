@@ -1,0 +1,19 @@
+<div class="signin_form">
+
+    <h2>Forgot your password?</h2>
+
+    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="sign_field">
+        <%= f.email_field :email, :class => "inp", :placeholder => "Email"  %>
+      </div>
+
+      <div class="sign_field clearfix signin_form_btn_box">
+          <div class="singin_btn">
+            <%= f.submit "Send me reset password instructions" %>
+          </div>
+      </div>
+    <% end %>
+
+</div>
